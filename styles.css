@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin",sans-serif;
+}
+.container{
+    width: 1170px;
+    padding: 18px 18px 10px 18px;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    height: calc(100vh - 30px);
+    text-align: center;
+    align-items: center;
+    align-content: space-evenly;
+}
+.text h1{
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 2.2em;
+}
+.text h1 span{
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+label{
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 350px;
+    display: flex;
+}
+label p{
+    position: absolute;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+    bottom: 0px;
+    color: red;
+    font-style: italic;
+    left: 0;
+    transform: translate(10px, calc(100% + 4px));
+    display: none;
+}
+input{
+    border-radius: 25px;
+    border: 1px solid hsla(0, 0%, 59%, 0.559);
+    padding: 10px 25px;
+    
+}
+input[type="text"]{
+    min-width: 350px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+input[type="text"]::placeholder{
+    color: hsla(0, 0%, 59%, 0.559);
+}
+input[type="submit"]{
+    padding: 13px 15px;
+    min-width: 150px;
+    border: none;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 3px 5px 0 hsl(223deg 87% 63% / 77%);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+    max-width: 350px;
+    flex-shrink: 1;
+}
+input[type="submit"]:hover{
+    background-color: hsl(223, 65%, 53%);
+}
+.icons{
+    display: flex;
+}
+.icons>*{
+    margin-right: 20px;
+    color: hsl(223, 87%, 63%);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+}
+.fa-brands{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.icons .fa-brands:hover{
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+}
+img[alt="dashbord"]{
+    width: 500px;
+}
+.container>p{
+    font-size: 12px;
+    color: hsla(0, 0%, 59%, 0.559);;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width:1200px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (max-width:997px) {
+    .container{
+        width: 760px;
+    }
+}
+@media (max-width:790px) {
+    .container{
+       width: 100%;
+    }
+}
+@media (max-width:680px) {
+    .text h1{
+        font-size: 1.8em;
+        letter-spacing: -1px;
+    }
+    img[alt="dashbord"]{
+        width: 100%;
+    }
+    input[type="text"],label{
+        max-width: 350px;
+        min-width: unset;
+    }
+    form{
+        gap: 20px;
+    }
+}
